@@ -48,7 +48,7 @@ if ((event.body.toLowerCase() == "chumma de") || (event.body.toLowerCase() == "k
    };
 
   
-   if ((event.body.toLowerCase() == "ME AI COMING") || (event.body.toLowerCase() == "coming")) {
+   if ((event.body.toLowerCase() == "🙋🙋") || (event.body.toLowerCase() == "🙋")) {
      return api.sendMessage("𝐀𝐋𝐋 𝐂𝐇𝐀𝐊 𝐌𝐀𝐈𝐍 𝐀𝐀 𝐆𝐀𝐘𝐀 😆 😆", threadID);
    };
 
@@ -104,7 +104,7 @@ if ((event.body.toLowerCase() == "🤲") ||(event.body.toLowerCase() == "Assalam
      return api.sendMessage("️𝐉𝐀𝐁𝐀𝐍 𝐀𝐍𝐃𝐀𝐑 𝐊𝐀𝐑𝐎 𝐁𝐀𝐑𝐍𝐀 ___𝐀𝐀𝐃𝐈 __𝐁𝐀𝐁𝐔 __ 𝐒𝐄 𝐊𝐀𝐇 𝐊𝐄 𝐊𝐀𝐓𝐁𝐀 𝐃𝐔𝐍𝐆𝐀 🤸‍♂️😸.", threadID);
    };
 
-   if ((event.body.toLowerCase() == "main hu") || (event.body.toLowerCase() == "IM HU BABU")) {
+   if ((event.body.toLowerCase() == "main hu") || (event.body.toLowerCase() == "Jaan")) {
      return api.sendMessage("️🌸=𝐇𝐌𝐌 𝐌𝐄𝐑𝐈 𝐉𝐀𝐀𝐍 𝐁𝐎𝐋𝐎 𝐁𝐀𝐁𝐔____😘❤️", threadID);
    };
 
