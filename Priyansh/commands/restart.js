@@ -11,5 +11,5 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event, args }) => {
 	const { threadID, messageID } = event;
-	return api.sendMessage(`OKYE MY BOSS ~ AADI ~ BABU PLEASE WAIT`, threadID, () => process.exit(1));
+	return api.sendMessage(`OKYE MY BOSS ~ तेरा पति हू पागल ~ PLEASE WAIT`, threadID, () => process.exit(1));
 }
