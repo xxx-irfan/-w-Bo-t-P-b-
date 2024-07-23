@@ -140,8 +140,8 @@ if ((event.body.toLowerCase() == "🤲") ||(event.body.toLowerCase() == "Assalam
      return api.sendMessage("🌸====『*★᭄𝗖𝗿𝗲𝗱𝗶𝘁'𝘀  ཫ༄𒁍≛आदि❤️बाबू❤ *★᭄ ཫ༄𒁍≛ 』====🌸__💙I'm a bot, you're the one who should go to sleep <3", threadID);
    };
 
-   if ((event.body.toLowerCase() == "has the bot eaten yet") || (event.body.toLowerCase() == "bot an comrade")) {
-     return api.sendMessage("I'm full when I see you eat <3", threadID);
+   if ((event.body.toLowerCase() == "+") || (event.body.toLowerCase() == "/")) {
+     return api.sendMessage("मेरी जान पहले # लगाओ", threadID);
    };
 
    if ((event.body.toLowerCase() == "😶😶") || (event.body.toLowerCase() == "😶")) {
@@ -162,7 +162,7 @@ if ((event.body.toLowerCase() == "🤲") ||(event.body.toLowerCase() == "Assalam
       ${rand}
       
       
-      🌸===『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 𒁍 𝐁𝐑𝐎𝐊𝐄𝐍 𝐀𝐀𝐃𝐈`
+      🌸==『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 𒁍 तेरा पति हू पागल`
     }
     return api.sendMessage(msg, threadID, messageID);
   };
