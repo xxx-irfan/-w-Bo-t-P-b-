@@ -74,12 +74,12 @@ for (let item of returnArray) msg += `『${++i}』 ${prefix}${item}\n`;
     
     
     const siu = `╭──────────╮\n𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒 𝐋𝐈𝐒𝐓\n╰──────────╯`;
- const text = `\n╭──────╮\n ✅𝐏𝐀𝐆𝐄✅\n╰──────╯ (${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)})\n𝗨𝘀𝗲${prefix}help To See More 🌷𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗻𝗮𝗺𝗲🌷more details about that command\n\nCurrently available ${arrayInfo.length} command on ${global.config.BOTNAME} Bot\n\n╭────────╮\n𝗡𝗔𝗠𝗘 𝗢𝗪𝗡𝗘𝗥 \n╰────────╯\n${prefix}\n╭──────╮\n † —͟͟͞͞𖣘𝐘̬̬̬̬̬̬̚͜Ꮗ'ɽ' BROKEN AADI『 𝐱͡⃝ᴆ 』†\n╰──────╯
+ const text = `\n╭──────╮\n ✅𝐏𝐀𝐆𝐄✅\n╰──────╯ (${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)})\n𝗨𝘀𝗲${prefix}help To See More 🌷𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗻𝗮𝗺𝗲🌷more details about that command\n\nCurrently available ${arrayInfo.length} command on ${global.config.BOTNAME} Bot\n\n╭────────╮\n𝗡𝗔𝗠𝗘 𝗢𝗪𝗡𝗘𝗥 \n╰────────╯\n${prefix}\n╭──────╮\n † —͟͟͞͞𖣘𝐘̬̬̬̬̬̬̚͜Ꮗ'ɽ' तेरा पति हू पागल『 𝐱͡⃝ᴆ 』†\n╰──────╯
 💞𝗕𝗼𝘁 𝗖𝗼𝗺𝗺𝘂𝗻𝗶𝘁𝘆 𝗛𝗲𝗹𝗽𝗶𝗻𝗴 𝗭𝗼𝗻𝗲💞\n
 [✅𝐅𝐀𝐂𝐄𝐁𝐎𝐎K✅]\n
-https://www.facebook.com/100010492052172if  {
+https://www.facebook.com/61563506060490if  {
 }🥀🥀\n╭───────╮\n  𝐘𝐎𝐔𝐍𝐆𝐒𝐓𝐀𝐑𝐒'𝐬\n╰───────╯
-𝐊𝐨𝐢 𝐏𝐮𝐜𝐡𝐞 𝐓𝐨 𝐊𝐞𝐡𝐧𝐚 BROKEN AADI 𝐀𝐲𝐚 𝐓𝐡𝐚 ✌😎`;
+𝐊𝐨𝐢 𝐏𝐮𝐜𝐡𝐞 𝐓𝐨 𝐊𝐞𝐡𝐧𝐚 तेरा पति हू पागल 𝐀𝐲𝐚 𝐓𝐡𝐚 ✌😎`;
  
     return api.sendMessage(siu + "\n\n" + msg  + text, threadID, async (error, info) => {
 			if (autoUnsend) {
