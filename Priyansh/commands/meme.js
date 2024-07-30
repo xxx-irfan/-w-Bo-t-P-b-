@@ -2,7 +2,7 @@
 ////////////////////////////////////////////////////////
 /////// WARNING => JO CREDIT NAME CHANGE KREGA USKA ID BAN KAR DIYA JAYEGA + THIS BOT IS MADE BT PREM BABU
 module.exports.config = {
-  name: "meme",
+  name: "Meme",
   version: "2.0.5",
   hasPermssion: 0,
   credits: "PREM BABU",
