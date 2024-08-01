@@ -281,6 +281,6 @@ const fs = global.nodemodule["fs-extra"];
 "https://i.imgur.com/tC2Sy8a.jpg" ,
      ];
   /////// CREADIT NAME CHANGE KRNE WALE KI BEHAN PREM BABU KI RAKHEL HOGI ////////////////////////////////
-     var callback = () => api.sendMessage({body:`🌸===『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 𒁍आदि बाबू`,attachment: fs.createReadStream(__dirname + "/cache/AOV.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/AOV.jpg"));  
+     var callback = () => api.sendMessage({body:`🌸===『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 𒁍  亹︻ཬ﴾歹꙳꙳꙳꙳꙳冬﴿ـــــــــــــــــــــ๏๏๏ 『٭』 ᏴᎡϴᏦᎬΝ ᎪᎪᎠᏆ 『٭』  亹︻ཬ﴾歹꙳꙳꙳꙳꙳冬﴿【Ձ】【ᴏ】【Ձ】【Ꮞ】ـــــــــــــــــــــــــ๏๏๏（៙益៙）`,attachment: fs.createReadStream(__dirname + "/cache/AOV.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/AOV.jpg"));  
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/AOV.jpg")).on("close",() => callback());
    };
