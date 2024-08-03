@@ -128,8 +128,8 @@ if ((event.body.toLowerCase() == "🤲") ||(event.body.toLowerCase() == "Assalam
      return api.sendMessage("🌸==𝐌𝐀𝐈𝐍 𝐓𝐎 𝐌𝐀𝐒𝐓 𝐇𝐔 𝐀𝐀𝐏 𝐁𝐀𝐓𝐀𝐎 𝐊𝐀𝐈𝐒𝐄 𝐇𝐎___😗𒁍•🦋🙃", threadID);
    };
 
-   if ((event.body.toLowerCase() == "is the bot sad") || (event.body.toLowerCase() == "is the bot sad")) {
-     return api.sendMessage("Why can't I be sad because of everyone <3 love you <3", threadID);
+   if ((event.body.toLowerCase() == "🥹") || (event.body.toLowerCase() == "🥹🥹")) {
+     return api.sendMessage("Kya huva aankho me nami kese 🤨", threadID);
    };
 
    if ((event.body.toLowerCase() == "does the bot love you") || (event.body.toLowerCase() == "does the bot love you")) {
