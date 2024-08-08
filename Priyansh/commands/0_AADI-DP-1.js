@@ -56,7 +56,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
  
   var background = [
  
-    "https://i.imgur.com/wCyyVN6.jpeg"
+    "https://i.imgur.com/TmEwtV6.jpeg"
 ];
   var rd = background[Math.floor(Math.random() * background.length)];
  
