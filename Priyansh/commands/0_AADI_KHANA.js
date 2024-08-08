@@ -17,8 +17,8 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	let react = event.body.toLowerCase();
 	if(react.includes("KHANA") ||
      react.includes("khana") || react.includes("lunch") || react.includes("kana") ||
-react.includes("dinner") ||
-react.includes("kha lo")) {
+react.includes("Khana") ||
+react.includes("breakfast")) {
 		var msg = {
 				body: `🙂 𝚈𝙰 𝙻𝙾 𝙹𝙰𝙰𝙽𝚄 𝙺𝙷𝙰𝙽𝙰 𝙺𝙷𝙰𝙾 🙂`,attachment: fs.createReadStream(__dirname + `/AADI/AA2.jpg`)
 			}
