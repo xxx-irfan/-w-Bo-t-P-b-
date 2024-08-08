@@ -21,12 +21,12 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   
   var rand = tl[Math.floor(Math.random() * tl.length)]
 
-    if ((event.body.toLowerCase() == "good night") || (event.body.toLowerCase() == "Good night all ")) {
-     return api.sendMessage("🌸=𝐆𝐎𝐎𝐃__𝐍𝐈𝐆𝐇𝐓___😘 𝐒𝐎𝐍𝐄 𝐒𝐄 𝐏𝐀𝐇𝐋𝐄 𝐌𝐄𝐑𝐀 𝐍𝐀𝐀𝐌 𝐋𝐄 𝐋𝐀𝐍𝐀 𝐁𝐇𝐎𝐎𝐓 𝐍𝐀𝐇𝐈 𝐀𝐀𝐄𝐆𝐀_____ 😂:))", threadID);
+    if ((event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
+     return api.sendMessage("", threadID);
    };
 
-    if ((event.body.toLowerCase() == "miss you bot") || (event.body.toLowerCase() == "Miss you")) {
-     return api.sendMessage("𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐁𝐀𝐁𝐔 😘", threadID);
+    if ((event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
+     return api.sendMessage("", threadID);
    };
   
    if
