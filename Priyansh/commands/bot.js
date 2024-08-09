@@ -21,8 +21,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   
   var rand = tl[Math.floor(Math.random() * tl.length)]
 
-    if ((event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
-     return api.sendMessage("", threadID);
+    if ((event.body.toLowerCase() == "KATTAR") || (event.body.toLowerCase() == "@Kattar Thakurain")) {
+     return api.sendMessage("𝐁𝐎 𝐒𝐇𝐘𝐀𝐃 𝐁𝐔𝐒𝐘 𝐇𝐀𝐈 𝐀𝐀𝐏 𝐌𝐄𝐑𝐄𝐊𝐎 𝐁𝐓𝐀 𝐃𝐎 𝐌𝐀𝐈 𝐔𝐍𝐊𝐎 𝐁𝐓𝐀 𝐃𝐔𝐍𝐆𝐀 😼😼", threadID);
    };
 
     if ((event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
