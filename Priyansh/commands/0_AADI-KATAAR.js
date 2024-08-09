@@ -13,8 +13,8 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
 	if(react.includes("JIDDI") ||
-     react.includes("jiddi") || react.includes("@Jiddi girl 🥵") || react.includes("@Kattar Thakurain") ||
-react.includes("kattar") ||
+     react.includes("") || react.includes("") || react.includes("") ||
+react.includes("") ||
 react.includes("KATTAR")) {
 		var msg = {
 				body: `Bete yha se marna chalu karunga aur india border tak gand me chappal marte le jaunga samjha😹`,
