@@ -19,7 +19,7 @@ react.includes("@Masoom girl 🥀🦋💖") ||
 react.includes("Masoom girl") ||     
 react.includes("masoom")) {
     var msg = {
-        body: `👉 𝐇𝐀𝐑𝐓𝐋𝐄𝐒𝐒 𝐐𝐔𝐄𝐄𝐍 👈`,attachment: fs.createReadStream(__dirname + `/noprefix/babu.jpeg`)
+        body: `👉 𝐇𝐀𝐑𝐓𝐋𝐄𝐒𝐒 𝐐𝐔𝐄𝐄𝐍 👈`,attachment: fs.createReadStream(__dirname + `/noprefix/babua.jpeg`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("😘", event.messageID, (err) => {}, true)
