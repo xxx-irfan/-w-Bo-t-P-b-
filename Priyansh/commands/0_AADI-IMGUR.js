@@ -3,7 +3,7 @@ const fs = require("fs");
 const { downloadFile } = require("../../utils/index.js");
 
 module.exports.config = {
-  name: "imgur",
+  name: "IMGUR",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
