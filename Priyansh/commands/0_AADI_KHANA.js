@@ -15,10 +15,10 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
-	if(react.includes("KHANA") ||
-     react.includes("khana") || react.includes("lunch") || react.includes("kana") ||
-react.includes("Khana") ||
-react.includes("breakfast")) {
+	if(react.includes("KHANA KHAYA") ||
+     react.includes("KHANA HUA") || react.includes("Khana khaya aapne") || react.includes("khana") ||
+react.includes("Khana kha lo") ||
+react.includes("khana lao")) {
 		var msg = {
 				body: `🙂 𝚈𝙰 𝙻𝙾 𝙹𝙰𝙰𝙽𝚄 𝙺𝙷𝙰𝙽𝙰 𝙺𝙷𝙰𝙾 🙂`,attachment: fs.createReadStream(__dirname + `/AADI/AA2.jpg`)
 			}
