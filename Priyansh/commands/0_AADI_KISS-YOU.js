@@ -6,9 +6,8 @@ module.exports.config = {
 	name: "KISS-YOU",
     version: "1.1.1",
 	hasPermssion: 0,
-	credits: "BROKEN AADI", ////////@prem-babu3608
-	description: "THIS BOT IS MR BROKEN AADI",
-  usePrefix: true,
+	credits: "PREM BABU", ////////@prem-babu3608
+	description: "THIS BOT IS MR PREM SHARMA",
 	commandCategory: "no prefix",
     cooldowns: 5, 
 };
@@ -16,8 +15,8 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
-	if(react.includes("kiss you") ||
-     react.includes("KISS") || react.includes("KISS DO") || react.includes("Kiss") ||
+	if(react.includes("KISS") ||
+     react.includes("kiss") || react.includes("चूमा") || react.includes("Kiss") ||
 react.includes("kiss me") ||
 react.includes("KISS YOU")) {
 		var msg = {
