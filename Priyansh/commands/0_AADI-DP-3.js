@@ -56,7 +56,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
  
   var background = [
  
-    "https://i.imgur.com/kZx4C4O.jpeg"
+    "https://i.imgur.com/rcIirJS.jpeg"
 ];
   var rd = background[Math.floor(Math.random() * background.length)];
  
@@ -91,7 +91,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
           ctx.beginPath();
  
  
-  ctx.drawImage(baseAvt1, 140, 158, 185, 221);
+  ctx.drawImage(baseAvt1, 300, 120, 200, 100);
  
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
