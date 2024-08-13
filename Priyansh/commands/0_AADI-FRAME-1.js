@@ -2,7 +2,7 @@ module.exports.config = {
     name: "fram",
     version: "7.3.1",
     hasPermssion: 0,
-    credits: "AADI BABU", 
+    credits: "PREM BABU", 
     description: "THIS BOT WAS MADE BY MR PREM BABU",
     commandCategory: "PROFILE DP FRAME",
     usages: "PREFIX MENTIONS",
@@ -22,7 +22,7 @@ module.exports.onLoad = async() => {
     const dirMaterial = __dirname + `/cache/canvas/`;
     const path = resolve(__dirname, 'cache/canvas', 'frame.jpeg');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.imgur.com/ZyutEM8.jpeg", path);
+    if (!existsSync(path)) await downloadFile("https://i.imgur.com/kjO6PLX.jpeg", path);
 }
 
 async function makeImage({ one, two }) {
@@ -45,7 +45,7 @@ async function makeImage({ one, two }) {
     
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    batgiam_img.composite(circleOne.resize(230, 200), 200, 50).composite(circleTwo.resize(350, 300), 70, 70);
+    batgiam_img.composite(circleOne.resize(230, 230), 540, 120).composite(circleTwo.resize(350, 350), 65, 65);
     
     let raw = await batgiam_img.getBufferAsync("image/jpeg");
     
@@ -69,6 +69,6 @@ module.exports.run = async function ({ event, api, args }) {
     if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
     else {
         const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "💝 𝐘 𝐎 𝐔  𝐌 𝐄 💝", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "♥️♥️♥️", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
                                       }
