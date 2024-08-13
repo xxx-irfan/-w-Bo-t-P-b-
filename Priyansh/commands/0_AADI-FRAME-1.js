@@ -45,7 +45,7 @@ async function makeImage({ one, two }) {
     
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    batgiam_img.composite(circleOne.resize(230, 230), 540, 120).composite(circleTwo.resize(350, 350), 65, 65);
+    batgiam_img.composite(circleOne.resize(230, 260), 400, 100).composite(circleTwo.resize(300, 350), 65, 65);
     
     let raw = await batgiam_img.getBufferAsync("image/jpeg");
     
@@ -69,6 +69,6 @@ module.exports.run = async function ({ event, api, args }) {
     if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
     else {
         const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "♥️♥️♥️", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "💝 𝐘 𝐎 𝐔  𝐌 𝐄 💝", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
                                       }
