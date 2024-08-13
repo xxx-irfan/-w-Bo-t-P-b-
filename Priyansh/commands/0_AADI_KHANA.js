@@ -16,7 +16,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
 	if(react.includes("KHANA KHAYA") ||
-     react.includes("KHANA HUA") || react.includes("Khana khaya aapne") || react.includes("khana") ||
+     react.includes("KHANA HUA") || react.includes("Khana khaya aapne") || react.includes("khana do") ||
 react.includes("Khana kha lo") ||
 react.includes("khana lao")) {
 		var msg = {
