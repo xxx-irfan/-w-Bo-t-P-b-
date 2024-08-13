@@ -48,8 +48,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("️️️𝐓𝐢𝐫𝐜𝐡𝐢 𝐧𝐚𝐳𝐚𝐫𝐢𝐲𝐚 𝐦𝐨𝐫𝐢 𝐡𝐚𝐚𝐲𝐞 𝐡𝐚𝐚𝐲𝐞 𝐡𝐚𝐚𝐲𝐞 🙈", threadID);
    };
   
-  if ((event.body.toLowerCase() == "I miss you bot") || (event.body.toLowerCase() == "I MISS YOU BOT")) {
-     return api.sendMessag("𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐌𝐄𝐑𝐈 𝐉𝐀𝐀𝐍 😘 😘", threadID);
+  if ((event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
+     return api.sendMessag("", threadID);
    };
 
    if ((event.body.toLowerCase() == "🤦") || (event.body.toLowerCase() == "🤦🤦")) {
@@ -108,8 +108,8 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("️𝐀𝐀𝐍𝐊𝐇 𝐊𝐘𝐔 𝐌𝐀𝐀𝐑 𝐑𝐀𝐇𝐄 𝐇𝐎 𝐌𝐄 𝐁𝐇𝐔𝐓 𝐒𝐇𝐀𝐑𝐄𝐄𝐅 𝐇𝐔 🥺🤟", threadID);
    };
 
-  if ((event.body.toLowerCase() == "love you") || (event.body.toLowerCase() == "i love you")) {
-     return api.sendMessage("Hmm..Love you too baby 💋😘:))", threadID);
+  if ((event.body.toLowerCase() == "") || (event.body.toLowerCase() == "")) {
+     return api.sendMessage("", threadID);
    };
   
    if ((event.body.toLowerCase() == "name kya h") || (event.body.toLowerCase() == "naam kya hai") || (event.body.toLowerCase() == "naam kiya hai")) {
