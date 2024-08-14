@@ -1,9 +1,9 @@
 const fs = global.nodemodule["fs-extra"];
 module.exports.config = {
-  name: "Prem Bot",
+  name: "AADI BOT",
   version: "1.0.1",
   hasPermssion: 0,
-  credits: "PREM BABU",
+  credits: "AADI BABU",
   description: "prem bot",
   commandCategory: "Noprefix",
   usages: "noprefix",
