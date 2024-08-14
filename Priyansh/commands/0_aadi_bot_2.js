@@ -3,7 +3,7 @@ module.exports.config = {
   name: "jaanbot",
   version: "1.0.1",
   hasPermssion: 0,
-  credits: "PREM BABU",
+  credits: "AADI BABU",
   description: "all reply",
   commandCategory: "Noprefix",
   usages: "noprefix",
