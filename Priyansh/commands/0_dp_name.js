@@ -70,7 +70,7 @@ if(!fs.existsSync(__dirname+'/cache/SNAZZYSURGE.ttf')) {
   const line = await this.wrapText(ctx, text[0], 400);
   const lines = await this.wrapText(ctx, text[1], 464);
   ctx.fillText(line.join("\n"), 320, 165)
-  ctx.fillText(lines.join("\n"), 170, 340)
+  ctx.fillText(lines.join("\n"), 150, 100)
   ctx.beginPath();
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
