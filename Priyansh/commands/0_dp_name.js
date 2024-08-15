@@ -69,7 +69,7 @@ if(!fs.existsSync(__dirname+'/cache/SNAZZYSURGE.ttf')) {
   ctx.textAlign = "center";
   const line = await this.wrapText(ctx, text[0], 400);
   const lines = await this.wrapText(ctx, text[1], 464);
-  ctx.fillText(line.join("\n"), 300, 280)
+  ctx.fillText(line.join("\n"), 280, 280)
   ctx.fillText(lines.join("\n"), 250, 190)
   ctx.beginPath();
   const imageBuffer = canvas.toBuffer();
