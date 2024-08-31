@@ -132,7 +132,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
       
       
       ${rand} \n\n                       
-    🌸===『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 𒁍 『٭』 ᏴᎡϴᏦᎬΝ ᎪᎪᎠᏆ 『٭』`
+    `
     }
     return api.sendMessage(msg, threadID, messageID);
   };
