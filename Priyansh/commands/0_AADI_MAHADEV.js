@@ -16,11 +16,13 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
         var { threadID, messageID } = event;
         let react = event.body.toLowerCase();
         if(react.includes("MAHADEV") ||
-     react.includes("Mahadev") || react.includes("mahakal") || react.includes("har har Mahadev") ||
-react.includes("HAR HAR MAHADEV") ||
-react.includes("HAR HAR MAHAKAL")) {
+     react.includes("mahadev") || react.includes("MAHAKAL") || react.includes("Mahakal") ||
+react.includes("mahakal") ||
+react.includes("Mahadev")) {
                 var msg = {
-                                body: `💙 ───— ह༢ ह༢ मह།देव ─── 💙`,
+                                body: `💙 ───— ह༢ ह༢ मह།देव ─── 💙
+ 💙 ─── 📿 ૐ નમ: શિવાય 📿 ─── 💙
+🔱 𓆩 ᎷᎪᎻᎪᎠᎬᏙ 𓆪 🔱`,
                         }
                         api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🤩", event.messageID, (err) => {}, true)
