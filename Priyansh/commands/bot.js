@@ -155,10 +155,9 @@ if ((event.body.toLowerCase() == "🤲") ||(event.body.toLowerCase() == "Assalam
   
   if (event.body.indexOf("Bot") == 0 || (event.body.indexOf("Bot") == 0)) {
     var msg = {
-      body: `『٭』${name}『٭』 
+      body: `💙───${name}───💙
       
-   
-      ${rand}
+    ${rand}
       
       
       `
