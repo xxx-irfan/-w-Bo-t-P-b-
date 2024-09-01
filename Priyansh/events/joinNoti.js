@@ -49,7 +49,7 @@ OWNER: आदि
 
 ♻️Facebook: 
 
-https://www.facebook.com/sahe.aalam.1042?mibextid=JRoKGi
+https://www.facebook.com/bijayani.sahoo.98?mibextid=ZbWKwL
 
 Youtube Site : N/A
 
@@ -59,7 +59,7 @@ https://www.instagram.com/aadi_singh__143?igsh=MXVneXZ6bzR4bHhvcg==￼
 
 ☣️Email: aadibroken046@gmail.com
 
-⚠️Wp: 9548950035 `, attachment: fs.createReadStream(__dirname + "/cache/AADI109.mp4")} ,threadID));
+⚠️Wp: 9548950035 `, attachment: fs.createReadStream(__dirname + "/cache/AADI/XXX1.mp4")} ,threadID));
 	}
 	else {
 		try {
