@@ -63,7 +63,7 @@ module.exports. run = function({ api, event, args, getText }) {
     i = startSlice;
     const returnArray = arrayInfo.slice(startSlice, startSlice + numberOfOnePage);
 
-    for (let item of returnArray) msg += `𒁍  [${++i}] → ${prefix}${item} ❃ ══ ❤️ \n`;
+    for (let item of returnArray) msg += `𒁍  [${++i}] ❤️ ═  ${prefix}${item} ❃ ═ ❤️ \n`;
 
 
     const siu = `┏━━━━━┓\n    आदि-बाबू                    ✧═══•❁😛❁•═══✧\n┗━━━━━┛\n\n\n✧═══❁♥️TOTAL COMMAND LIST ♥️❁═══✧`;
