@@ -16,14 +16,14 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
         var { threadID, messageID } = event;
         let react = event.body.toLowerCase();
         if(react.includes("BYE") ||
-     react.includes("bye") || react.includes("Bye") || react.includes("स्वागत") ||
-react.includes("by") ||
-react.includes("By")) {
+     react.includes("bye") || react.includes("Bye") || react.includes("𝐁𝐘𝐄") ||
+react.includes("🅱🆈🅴") ||
+react.includes("🄱🅈")) {
                 var msg = {
-                                body: `🌺🌸💮𝗯ŷ𝖾𝗯ᵞ𝑒 𝗯ŷ𝖾𝗯ᵞ𝑒💮🌸🌺`,
+                                body: `🙋  🄱🅈🄴 🄱🅈🄴 🄱🄰🄱🅄 🄼🄸🅂🅂 🅈🄾🅄 🄱🄷🅄🅃 🅂🄰🅁🄰  🙋`,
                         }
                         api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("🤩", event.messageID, (err) => {}, true)
+    api.setMessageReaction("🥺", event.messageID, (err) => {}, true)
                 }
         }
         module.exports.run = function({ api, event, client, __GLOBAL }) {
