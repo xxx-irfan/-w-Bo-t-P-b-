@@ -1,43 +1,74 @@
 module.exports.config = {
-  name: "Bhai", 
-  version: "1.0.1",
+  name: "Friend",
+  version: "7.3.1",
   hasPermssion: 0,
-  credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-  description: "See the match ratio between 2 people",
-  commandCategory: "Game",
-  usages: "[tag]",
-  cooldowns: 5,
+  credits: " Priyansh Rajput", 
+  description: "Get Pair From Mention",
+  commandCategory: "png",
+  usages: "[@mention]",
+  cooldowns: 5, 
   dependencies: {
+      "axios": "",
       "fs-extra": "",
-      "axios": ""
+      "path": "",
+      "jimp": ""
   }
+};
+
+module.exports.onLoad = async() => {
+  const { resolve } = global.nodemodule["path"];
+  const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
+  const { downloadFile } = global.utils;
+  const dirMaterial = __dirname + `/cache/canvas/`;
+  const path = resolve(__dirname, 'cache/canvas', 'Bbro.png');
+  if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
+  if (!existsSync(path)) await downloadFile("https://i.imgur.com/2bY5bSV.jpg", path); 
 }
 
-module.exports.run = async function({ api, args, Users, event}) {
-  const axios = global.nodemodule["axios"];
-const request = global.nodemodule["request"];
-const fs = global.nodemodule["fs-extra"];
-  var mention = Object.keys(event.mentions)[0];
-  if(!mention) return api.sendMessage("Need to tag 1 friend you want to see the matching ratio", event.threadID);
-  var name = (await Users.getData(mention)).name
-  var namee = (await Users.getData(event.senderID)).name
-  var tle = Math.floor(Math.random() * 101);
+async function makeImage({ one, two }) {
+  const fs = global.nodemodule["fs-extra"];
+  const path = global.nodemodule["path"];
+  const axios = global.nodemodule["axios"]; 
+  const jimp = global.nodemodule["jimp"];
+  const __root = path.resolve(__dirname, "cache", "canvas");
 
-  var arraytag = [];
-      arraytag.push({id: mention, tag: name});
-      arraytag.push({id: event.senderID, tag: namee});
-  var mentions = Object.keys(event.mentions)
+  let batgiam_img = await jimp.read(__root + "/Bbro.png");
+  let pathImg = __root + `/batman${one}_${two}.png`;
+  let avatarOne = __root + `/avt_${one}.png`;
+  let avatarTwo = __root + `/avt_${two}.png`;
 
-      let Avatar = (await axios.get( `https://graph.facebook.com/${mentions}/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: "arraybuffer" } )).data; 
-          fs.writeFileSync( __dirname + "/cache/avt.png", Buffer.from(Avatar, "utf-8") );
-      let Avatar2 = (await axios.get( `https://graph.facebook.com/${event.senderID}/picture?height=720&width=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: "arraybuffer" } )).data;
-          fs.writeFileSync( __dirname + "/cache/avt2.png", Buffer.from(Avatar2, "utf-8") );        
+  let getAvatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
+  fs.writeFileSync(avatarOne, Buffer.from(getAvatarOne, 'utf-8'));
 
+  let getAvatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
+  fs.writeFileSync(avatarTwo, Buffer.from(getAvatarTwo, 'utf-8'));
 
-     var imglove = [];
+  let circleOne = await jimp.read(await circle(avatarOne));
+  let circleTwo = await jimp.read(await circle(avatarTwo));
+  batgiam_img.composite(circleOne.resize(191, 191), 93, 111).composite(circleTwo.resize(190, 190), 434, 107);
 
-            imglove.push(fs.createReadStream(__dirname + "/cache/avt2.png"));
-            imglove.push(fs.createReadStream(__dirname + "/cache/avt.png"));
-      var msg = {body: `⚡️The love ratio between ${namee} and ${name} is ${tle}% 🥰`, mentions: arraytag, attachment: imglove}
-      return api.sendMessage(msg, event.threadID, event.messageID)
+  let raw = await batgiam_img.getBufferAsync("image/png");
+
+  fs.writeFileSync(pathImg, raw);
+  fs.unlinkSync(avatarOne);
+  fs.unlinkSync(avatarTwo);
+
+  return pathImg;
+}
+async function circle(image) {
+  const jimp = require("jimp");
+  image = await jimp.read(image);
+  image.circle();
+  return await image.getBufferAsync("image/png");
+}
+
+module.exports.run = async function ({ event, api, args }) {    
+  const fs = global.nodemodule["fs-extra"];
+  const { threadID, messageID, senderID } = event;
+  const mention = Object.keys(event.mentions);
+  if (!mention[0]) return api.sendMessage("Kisi 1 ko mantion to kr tutiya 😅", threadID, messageID);
+  else {
+      const one = senderID, two = mention[0];
+      return makeImage({ one, two }).then(path => api.sendMessage({ body: "✧•❁ 𝐘𝐚𝐚𝐫 ❁•✧\n\n╔═══❖••° °••❖═══╗\n\n   𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥 𝐏𝐚𝐢𝐫𝐢𝐧𝐠\n\n╚═══❖••° °••❖═══╝\n\n   ✶⊶⊷⊷❍⊶⊷⊷✶\n\n       👑𝐘𝐄 𝐋𝐄 𝐌𝐈𝐋 𝐆𝐘𝐀❤\n\n𝐓𝐄𝐑𝐀 𝐉𝐈𝐆𝐑𝐈 𝐘𝐀𝐑𝐑 🩷\n\n   ✶⊶⊷⊷❍⊶⊷⊷✶", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+  }
     }
