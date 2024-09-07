@@ -26,7 +26,7 @@ module.exports.handleEvent = async function({ api, event }) {
             try {
 
             const videoInfo = await instagramGetUrl(event.body);
-            const hdLink = videoInfo.url_list[0];
+            const hdLink = videoInfo.video[0].video;
             const response = await axios.get(hdLink, { responseType: 'stream' });
             const tempFilePath = tempy.file({ extension: 'mp4' });
             const writer = fs.createWriteStream(tempFilePath);
@@ -36,7 +36,7 @@ module.exports.handleEvent = async function({ api, event }) {
                 const attachment = fs.createReadStream(tempFilePath);
                 await api.sendMessage({
                     attachment,
-                    body: "--亹︻ཬ﴾歹꙳꙳꙳꙳꙳冬﴿ـــــــــــــــــــــ๏๏๏ 『٭』 ᏴᎡϴᏦᎬΝ ᎪᎪᎠᏆ 『٭』  亹︻ཬ﴾歹꙳꙳꙳꙳꙳冬﴿【Ձ】【ᴏ】【Ձ】【Ꮞ】ـــــــــــــــــــــــــ๏๏๏（៙益៙） 🄱🄾🅃 』--  Here's the video you requested:"
+                    body: "『٭』 ᏴᎡϴᏦᎬΝ ᎪᎪᎠᏆ 『٭』  Here's the video you requested:"
                 }, event.threadID, (err) => {
                     if (err) console.error("Error sending message:", err);
                 });
