@@ -38,8 +38,6 @@ const fs = global.nodemodule["fs-extra"];
 
             imglove.push(fs.createReadStream(__dirname + "/cache/avt2.png"));
             imglove.push(fs.createReadStream(__dirname + "/cache/avt.png"));
-      var msg = {body: `✶⊶⊷⊷ ❁ 𝐅𝐑𝐈𝐄𝐍𝐃 ❁ ⊶⊷⊷✶${namee} ╔═══❖••° °••❖═══╗𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥 𝐏𝐚𝐢𝐫𝐢𝐧𝐠╚═══❖••° °••❖═══╝ ✶⊶⊷⊷❍⊶⊷⊷✶
-
-       👑𝐘𝐄 𝐋𝐄 𝐌𝐈𝐋 𝐆𝐘𝐀 ❤ 𝐓𝐄𝐑𝐀 𝐉𝐈𝐆𝐑𝐈 𝐘𝐀𝐑𝐑 🩷${name} is ${tle}% `🩷, mentions: arraytag, attachment: imglove}
+      var msg = {body: `⚡️The love ratio between ${namee} and ${name} is ${tle}% 🥰`, mentions: arraytag, attachment: imglove}
       return api.sendMessage(msg, event.threadID, event.messageID)
     }
