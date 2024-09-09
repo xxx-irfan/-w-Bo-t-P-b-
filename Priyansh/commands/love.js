@@ -22,7 +22,7 @@ module.exports.onLoad = async() => {
     const dirMaterial = __dirname + `/cache/canvas/`;
     const path = resolve(__dirname, 'cache/canvas', 'ay.jpeg');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.imgur.com/PbaoTT6.jpeg", path);
+    if (!existsSync(path)) await downloadFile("https://i.imgur.com/yynJVyB.jpeg", path);
 }
  
 async function makeImage({ one, two }) {
@@ -45,7 +45,7 @@ async function makeImage({ one, two }) {
  
     let circleOne = await jimp.read(await circle(avatarOne));
     let circleTwo = await jimp.read(await circle(avatarTwo));
-    batgiam_img.composite(circleOne.resize(170, 200), 120, 120).composite(circleTwo.resize(200, 150), 460, 100);
+    batgiam_img.composite(circleOne.resize(170, 170), 100, 120).composite(circleTwo.resize(170, 170), 445, 120);
  
     let raw = await batgiam_img.getBufferAsync("image/jpeg");
  
@@ -69,6 +69,6 @@ module.exports.run = async function ({ event, api, args }) {
     if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
     else {
         const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "𝐌𝐄𝐑𝐈 𝐂𝐔𝐓𝐄 𝐒𝐄 𝐉𝐀𝐀𝐍 😘━━━━━━━━━━━━━━━━━\n 𝐇𝐘𝐄 𝐒𝐀𝐃𝐊𝐘 𝐌𝐄 𝐀𝐏𝐍𝐘 𝐋𝐎𝐕𝐄 𝐏𝐘 😊━━━━━━━━━━━━━━━━━\n𝐈 𝐋𝐎𝐕𝐄 𝐘𝐎𝐔 𝐌𝐄𝐑𝐈 𝐉𝐀𝐀𝐍 🥰😘━━━━━━━━━━━━━━━━━━━ 𝐈 𝐋𝐎𝐕𝐄 𝐘𝐎𝐔 𝐓𝐎 𝐌𝐄𝐑𝐈 𝐉𝐀𝐀𝐍 🥰😘\n🌸===『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 𒁍𓆩💜𓆪Vɩvɘĸ Vɩsʜwʌĸʌʀɱʌ𓆩💜𓆪", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "🌸===『*★𝗖𝗿𝗲𝗱𝗶𝘁'𝘀 𒁍आदि बाबू☜ ✧•❁𝐅𝐫𝐢𝐞𝐧𝐝𝐬𝐡𝐢𝐩❁•✧\n\n╔═══❖••° °••❖═══╗\n\n   𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥 𝐏𝐚𝐢𝐫𝐢𝐧𝐠\n\n╚═══❖••° °••❖═══╝\n\n   ✶⊶⊷⊷❍⊶⊷⊷✶\n\n       👑𝐘𝐄 𝐋𝐄 𝐌𝐈𝐋 𝐆𝐘𝐀 ❤\n\n𝐓𝐄𝐑𝐀 𝐁𝐄𝐒𝐓𝐔 🩷\n\n   ✶⊶⊷⊷❍⊶⊷⊷✶                    ─━━◉❖𝐈 𝐋𝐎𝐕𝐄 𝐘𝐎𝐔🤗❖◉━━─           ❥═≛𝐒𝐎 𝐌𝐔𝐂𝐇 💝≛═❥                ─━━◉❖𝐌𝐘 𝐁𝐄𝐒𝐓𝐔🙈❖◉━━─\nỖ𝐖ηᗴ𝐑◉❖𒁍आदि बाबू", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
 }
