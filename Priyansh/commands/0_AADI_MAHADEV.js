@@ -1,33 +1,26 @@
-//@Prem-babu3608
-////////////////////////////////////////////////////////
-/////// WARNING => JO CREDIT NAME CHANGE KREGA USKA ID BAN KAR DIYA JAYEGA + THIS BOT IS MADE BT PREM BABU
 const fs = require("fs");
 module.exports.config = {
-        name: "Mahadev",
-    version: "1.1.1",
-        hasPermssion: 0,
-        credits: "PREM BABU", 
-        description: "THIS BOT IS PREM SHARMA",
-        commandCategory: "no prefix",
+	name: "mahadev",
+    version: "1.0.1",
+	hasPermssion: 0,
+	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭", 
+	description: "hihihihi",
+	commandCategory: "no prefix",
+	usages: "sub",
     cooldowns: 5, 
 };
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
-        var { threadID, messageID } = event;
-        let react = event.body.toLowerCase();
-        if(react.includes("MAHADEV") ||
-     react.includes("mahadev") || react.includes("MAHAKAL") || react.includes("Mahakal") ||
-react.includes("mahakal") ||
-react.includes("Mahadev")) {
-                var msg = {
-                                body: `💙 ───— ह༢ ह༢ मह།देव ─── 💙
- 💙 ─── 📿 ૐ નમ: શિવાય 📿 ─── 💙
-🔱 𓆩 ᎷᎪᎻᎪᎠᎬᏙ 𓆪 🔱`,
-                        }
-                        api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("🤩", event.messageID, (err) => {}, true)
-                }
-        }
-        module.exports.run = function({ api, event, client, __GLOBAL }) {
+	var { threadID, messageID } = event;
+	if (event.body.indexOf("Har har mahadev")==0 || event.body.indexOf("har har mahadev")==0 || event.body.indexOf("HAR HAR MAHADEV")==0 || event.body.indexOf("Har Har mahakal")==0) {
+		var msg = {
+				body: "__🥰  𝐌𝐀𝐈𝐍 𝐓𝐎 𝐑𝐀𝐃𝐇𝐀 𝐑𝐀𝐍𝐈 𝐊𝐀 𝐃𝐄𝐄𝐖𝐀𝐍𝐀 𝐇𝐔 𝐏𝐘𝐀𝐑 𝐒𝐄 𝐁𝐎𝐋𝐎 𝐑𝐀𝐃𝐇𝐄 𝐑𝐀𝐃𝐇𝐄 😍 ❤️",
+				attachment: fs.createReadStream(__dirname + `/AADI/ᴴ_ᴬ_ᴿ__ᴴ_ᴬ_ᴿ__ᴹ_ᴬ_ᴴ_ᴬ_ᴰ_ᴱ_ⱽ__🙏🏻_ᴶ_ᴬ_ᴵ__ˢ_ᴴ_ᴵ_ⱽ__ˢ_ᴴ_ᴬ_ᴺ_ᴷ_ᴬ_ᴿ__🥰❣️(360P).mp4`)
+			}
+			api.sendMessage(msg, threadID, messageID);
+    api.setMessageReaction("🙏", event.messageID, (err) => {}, true)
+		}
+	}
+	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
   }
